@@ -47,7 +47,8 @@ const App = () => {
           <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
-        <ToastContainer position="top-center" />
+        <ToastContainer />
+
       </Router>
     </>
   );

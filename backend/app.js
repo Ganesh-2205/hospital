@@ -14,11 +14,15 @@ const app = express();
 dotenv.config();
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL_ONE, process.env.FRONTEND_URL_TWO],
+    origin: [process.env.FRONTEND_URL, process.env.DASHBOARD_URL],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
 );
+console.log('FRONTEND_URL:', process.env.FRONTEND_URL);
+console.log('DASHBOARD_URL:', process.env.DASHBOARD_URL);
+
+
 
 app.use(cookieParser());
 app.use(express.json());

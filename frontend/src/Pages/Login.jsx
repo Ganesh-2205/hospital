@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import { toast } from "react-toastify";
 import { Context } from "../main";
 import { Link, useNavigate, Navigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 const Login = () => {
   const { isAuthenticated, setIsAuthenticated } = useContext(Context);
@@ -26,7 +27,7 @@ const Login = () => {
           }
         )
         .then((res) => {
-          toast.success(res.data.message);
+          toast.success("Logged in Successfully!");
           setIsAuthenticated(true);
           navigateTo("/");
           setEmail("");
